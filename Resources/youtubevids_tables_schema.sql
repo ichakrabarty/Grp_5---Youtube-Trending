@@ -10,6 +10,13 @@
 DROP TABLE Videos;
 DROP TABLE Category;
 DROP TABLE Channel;
+DROP TABLE Titles;
+
+--create Titles table
+CREATE TABLE Titles (
+	TitleID integer PRIMARY KEY NOT NULL,
+	Title text  NOT NULL
+);
 
 --create Channel table
 CREATE TABLE Channel (
@@ -25,13 +32,14 @@ CREATE TABLE Category (
 
 --create Videos table
 CREATE TABLE Videos (
-    VideoID varchar(30) PRIMARY KEY NOT NULL,
-    Title text  NOT NULL,
+    VideoID varchar(30) PRIMARY KEY NOT NULL,  
     PublishedAt date   NOT NULL,
     ChannelID varchar(50)   NOT NULL,
 	FOREIGN KEY (ChannelID) REFERENCES Channel(ChannelID),
     CategoryID integer   NOT NULL,
 	FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID),
+	TitleID integer,
+	FOREIGN KEY(TitleID) REFERENCES Titles(TitleID),
     TrendingDate date   NOT NULL,
     ViewCount integer    NOT NULL,
     Likes integer   NOT NULL,
