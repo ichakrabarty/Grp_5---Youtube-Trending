@@ -6,12 +6,12 @@
 -- two dots ('..' - without quotes).
 
 CREATE TABLE "Videos" (
-    "VideoID" varchar(20)   NOT NULL,
+    "VideoID" varchar(30)   NOT NULL,
     "Title" string   NOT NULL,
-    "PublishedAt" datetime   NOT NULL,
-    "ChannelID" varchar(30)   NOT NULL,
+    "PublishedAt" date   NOT NULL,
+    "ChannelID" varchar(50)   NOT NULL,
     "CategoryID" int   NOT NULL,
-    "TrendingDate" datetime   NOT NULL,
+    "TrendingDate" date   NOT NULL,
     "Tags" string   NOT NULL,
     "ViewCount" int   NOT NULL,
     "Likes" int   NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE "Videos" (
 );
 
 CREATE TABLE "Channel" (
-    "ChannelID" varchar(30)   NOT NULL,
+    "ChannelID" varchar(50)   NOT NULL,
     "ChannelTitle" string   NOT NULL,
     CONSTRAINT "pk_Channel" PRIMARY KEY (
         "ChannelID"
