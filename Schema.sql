@@ -7,10 +7,11 @@
 
 CREATE TABLE "Videos" (
     "VideoID" varchar(20)   NOT NULL,
-    "CategoryID" int   NOT NULL,
-    "ChannelID" varchar(30)   NOT NULL,
     "Title" string   NOT NULL,
     "PublishedAt" datetime   NOT NULL,
+    "ChannelID" varchar(30)   NOT NULL,
+    "CategoryID" int   NOT NULL,
+    "TrendingDate" datetime   NOT NULL,
     "Tags" string   NOT NULL,
     "ViewCount" int   NOT NULL,
     "Likes" int   NOT NULL,
@@ -36,9 +37,9 @@ CREATE TABLE "Category" (
      )
 );
 
-ALTER TABLE "Videos" ADD CONSTRAINT "fk_Videos_CategoryID" FOREIGN KEY("CategoryID")
-REFERENCES "Category" ("CategoryID");
-
 ALTER TABLE "Videos" ADD CONSTRAINT "fk_Videos_ChannelID" FOREIGN KEY("ChannelID")
 REFERENCES "Channel" ("ChannelID");
+
+ALTER TABLE "Videos" ADD CONSTRAINT "fk_Videos_CategoryID" FOREIGN KEY("CategoryID")
+REFERENCES "Category" ("CategoryID");
 
