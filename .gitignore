@@ -4,7 +4,8 @@ __pycache__/
 *$py.class
 US_youtube_trending_data.csv.zip
 US_youtube_trending_data.csv
-s
+US_category_id.json
+
 # C extensions
 *.so
 
