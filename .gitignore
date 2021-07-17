@@ -2,7 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+US_youtube_trending_data.csv.zip
+US_youtube_trending_data.csv
+s
 # C extensions
 *.so
 
