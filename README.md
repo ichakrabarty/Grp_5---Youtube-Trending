@@ -1,73 +1,20 @@
-# Grp_5---Youtube-Trending
+# Grp_5---Youtube-Trending Project Report
 
-Project 2: YouTube Trending Data in US
+### Objective
 
-**Group 5 Members:** 
+The goal of the project is to apply the ETL concept using Pandas by extracting data from two different data sources (CSV and JSON), transform the data and import it into a relational (SQL) database.
 
-·    Ishan Chakrabarty
+### Datasets Used
 
-·    Francis Escamilla
+Used Kaggle as the source of data for the project. The dataset provides the top trending videos on the YouTube platform.  It captures measurements of user interactions such as number of views, shares and likes.  Given complete data set is over one gigabyte in size, we opted to take the subset of data that covers only the US.  The name of the files and links to the source are listed below. 
 
-·    Adam Holcomb
+-  us_youtube_trending_data.csv 
 
-·    Susan Quiros
 
- 
+- us_category_id.json
 
-**Objective**
+ https://www.kaggle.com/rsrishav/youtube-trending-video-dataset?select=US_youtube_trending_data.csv
 
-​       The goal of the project is to apply the ETL concept using Pandas by extracting data from two different data sources (CSV and JSON), transform the data and import it into a relational (SQL) database. 
+### Data Transformation Steps Taken
 
-·    Data source: Kaggle: https://www.kaggle.com/rsrishav/youtube-trending-video-dataset?select=US_youtube_trending_data.csv
-
-o  us_youtube_trending_data.csv – File includes descriptive data about YouTube videos and it’s trending records/points
-
-o  us_category_id.json – Data set covers information regarding the video categories. 
-
-·    Potential Database
-
-o  Postgres
-
-o  
-
-**Potential database tables** 
-
-**Video_table:**
-
-Video id (pk)
-
-Category id foreign key
-
-Channel id foreign key
-
-Title
-
-published at
-
-Tags
-
-View count
-
-Likes
-
- Dislikes
-
-Description 
-
- 
-
-**Channel_table:**
-
-Channel id (pk)
-
-Chanel title  
-
- 
-
-**Category_table:**
-
- 
-
-Category id (pk)
-
-Category title
+### Schemata  
