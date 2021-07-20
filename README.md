@@ -26,9 +26,10 @@ In addition to data manipulation to address loading issues, below are some of th
 * Created TitleID and ChannelID (added reference columns to main dataframe)
 * Dropped duplicate values from Video dataframe on video ID. 
 * Re-organization of columns to match SQL schema tables and names
-* Used 
+* Used sqlalchemy to export the dataframes into the Postgres database. 
 
 ### Schemata  
 
 Decided to use a SQL relational database for this project. The database was created using PostgresSQL. The   final schema design is in 3rd Normal form in order to reduce as much duplication of data as possible. The SQL code to create the database is :  youtubevids_tables_schema.sql 
 
+![image-20210719213546419](C:\Users\franc\AppData\Roaming\Typora\typora-user-images\image-20210719213546419.png)
