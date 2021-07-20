@@ -17,4 +17,18 @@ Used Kaggle as the source of data for the project. The dataset provides the top 
 
 ### Data Transformation Steps Taken
 
+In addition to data manipulation to address loading issues, below are some of the transformations performed.
+
+* Selection of relevant columns from CSV to analyze and put in a dataframe
+* Changed format of date time to simple date for importing
+* Extracted contents of JSON into a dataframe
+* Created subset data frames for each of the tables 
+* Created TitleID and ChannelID (added reference columns to main dataframe)
+* Dropped duplicate values from Video dataframe on video ID. 
+* Re-organization of columns to match SQL schema tables and names
+* Used 
+
 ### Schemata  
+
+Decided to use a SQL relational database for this project. The database was created using PostgresSQL. The   final schema design is in 3rd Normal form in order to reduce as much duplication of data as possible. The SQL code to create the database is :  youtubevids_tables_schema.sql 
+

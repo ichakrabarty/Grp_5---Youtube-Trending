@@ -14,13 +14,13 @@ DROP TABLE Titles;
 
 --create Titles table
 CREATE TABLE Titles (
-	TitleID integer PRIMARY KEY NOT NULL,
+	TitleID serial PRIMARY KEY NOT NULL,
 	Title text  NOT NULL
 );
 
 --create Channel table
 CREATE TABLE Channel (
-    ChannelID varchar(50)  PRIMARY KEY NOT NULL,
+    ChannelID serial PRIMARY KEY NOT NULL,
     ChannelTitle text   NOT NULL
 );
 
@@ -32,9 +32,9 @@ CREATE TABLE Category (
 
 --create Videos table
 CREATE TABLE Videos (
-    VideoID varchar(30) PRIMARY KEY NOT NULL,  
+    VideoID varchar PRIMARY KEY NOT NULL,  
     PublishedAt date   NOT NULL,
-    ChannelID varchar(50)   NOT NULL,
+    ChannelID integer   NOT NULL,
 	FOREIGN KEY (ChannelID) REFERENCES Channel(ChannelID),
     CategoryID integer   NOT NULL,
 	FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID),
